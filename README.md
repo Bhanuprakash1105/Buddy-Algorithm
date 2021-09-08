@@ -9,6 +9,9 @@ Otherwise, the block is split in two equal companion buddies. If the size of the
 Otherwise, one of the buddies is split in half again.
 _This method continues until the smallest block greater than or equal to the size of the request is found and allocated to it._
 
+In this method, when a memory block that was allocated is freed then if possible, an unnallocated buddy is merged with a companion buddy in order to form a larger free block.
+_Two blocks are said to be companion buddies if they resulted from the split of the same direct parent block._
+
 ## Running the program
 
 The algorithm is implemented in C++ programming language (_Latest g++ compiler is recommended_)
